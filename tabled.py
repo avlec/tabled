@@ -1,6 +1,4 @@
-
-
-def main():
+ef main():
     pass
 
 if __name__ is '__main__':
