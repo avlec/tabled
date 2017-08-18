@@ -24,9 +24,12 @@ class Reservation(models.Model):
 
 
 class Table(models.Model):
-    reservations = models.ManyToManyField(Reservation)
+    reservations = models.ManyToManyField(Reservation, blank=True)
+    table_label = models.CharField(max_length=128)
     table_min_seating = models.IntegerField(default=1)
     table_max_seating = models.IntegerField(default=1)
+    def __str__(self):
+        return '{}, seats {} to {}'.format(self.table_label, self.table_min_seating, self.table_max_seating)
 
 
 class Restaurant(models.Model):
