@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import sys
-sys.path.append('/usr/local/lib/python3.6/dist-packages')
-
 import os
+# thing to fix linux packages
+sys.path.append('/usr/local/lib/python3.6/dist-packages')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -81,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'tabled',
-        'USER': 'avlec',
-        'PASSWORD': '231adgbz7yh',
+        'USER': 'tabledapi',
+        'PASSWORD': 'tgsYVLTuGrrvLGh9E3LCUcF795HhFqGD2zTjanwDZ4Lepp4pYJzCZC6LSjJAaEQC',
         'HOST': 'localhost',
         'port': '5432',
     }
