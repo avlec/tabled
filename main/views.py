@@ -5,12 +5,10 @@ from django.db import models
 from .models import Restaurant
 
 def index(request):
-    restaurant_list = Restaurant.objects.order_by('-id')
-    template = loader.get_template('main/templates/intex.html')
     context = {
-        'restaurant_list' : restaurant_list
+        'restaurant_list' : Restaurant.objects.order_by('-id')
     }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'index.html', context)
 
 
 def customer(request, customer_id):

@@ -9,7 +9,7 @@ from . import views
 
 urlpatterns = [
     # ex /main
-    url(r'^', views.index, name='index'),
+    url(r'^$', views.index, name='index'),
 
     # TODO use name instead of id
     # ex /main/restaurant/12/

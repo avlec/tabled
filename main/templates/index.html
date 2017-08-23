@@ -1,7 +1,7 @@
 {% if restaurant_list %}
     <ul>
         {% for restaurant in restaurant_list %}
-        <li><a href="/main/{{ restaurant.id }}/">{{ restaurant.restaurant_name }}</a></li>
+        <li><a href="/main/restaurant/{{ restaurant.id }}/">{{ restaurant.restaurant_name }}</a></li>
         {% endfor %}
     </ul>
 {% else %}
