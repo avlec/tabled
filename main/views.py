@@ -1,12 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 from django.db import models
 from .models import Restaurant
 
 def index(request):
-    #restaurant_list = Restaurant.objects.order_by('-id')
-    #output = ', '.join([q.resteraunt_name for q in restaurant_list])
-    return HttpResponse('index')
+    restaurant_list = Restaurant.objects.order_by('-id')
+    template = loader.get_template('main/templates/intex.html')
+    context = {
+        'restaurant_list' : restaurant_list
+    }
+    return HttpResponse(template.render(context, request))
 
 
 def customer(request, customer_id):
