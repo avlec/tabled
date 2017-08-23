@@ -1,0 +1,28 @@
+-- User: tabledapi
+-- DROP USER tabledapi;
+
+CREATE USER tabledapi WITH
+  PASSWORD 'tgsYVLTuGrrvLGh9E3LCUcF795HhFqGD2zTjanwDZ4Lepp4pYJzCZC6LSjJAaEQC'
+  LOGIN
+  NOSUPERUSER
+  INHERIT
+  NOCREATEDB
+  NOCREATEROLE
+  NOREPLICATION;
+
+-- Database: tabled
+-- DROP DATABASE tabled;
+
+CREATE DATABASE tabled WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_Canada.1252'
+    LC_CTYPE = 'English_Canada.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+GRANT TEMPORARY, CONNECT ON DATABASE tabled TO PUBLIC;
+
+GRANT ALL ON DATABASE tabled TO postgres;
+
+GRANT TEMPORARY ON DATABASE tabled TO tabledapi;
