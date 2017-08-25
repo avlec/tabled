@@ -7,4 +7,7 @@ class MainConfig(AppConfig):
     verbose_name = 'Tabled'
 
     def ready(self):
-        from .models import Customer, Reservation, Table, Restaurant
+        Customer = self.get_model('Customer')
+        Reservation = self.get_model('Reservation')
+        Table = self.get_model('Table')
+        Restaurant = self.get_model('Restaurant')

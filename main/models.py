@@ -26,7 +26,7 @@ class Reservation(models.Model):
         app_label = 'main'
 
     def __str__(self):
-        return self.party_name + ' for ' + self.party_size + ' at [' + self.reservation_time + ']'
+        return self.party_name + ' for ' + str(self.party_size) + ' at [' + str(self.reservation_time) + ']'
 
 
 class Table(models.Model):
