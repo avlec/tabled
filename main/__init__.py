@@ -1,1 +1,1 @@
-#default_app_config = 'main.apps.mainConfig'
+default_app_config = 'main.apps.MainConfig'
