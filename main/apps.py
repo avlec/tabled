@@ -2,6 +2,5 @@ from django.apps import AppConfig
 
 
 class MainConfig(AppConfig):
-    name = 'tabled'
-    label = 'tabled'
+    name = 'main'
     verbose_name = 'Tabled'
