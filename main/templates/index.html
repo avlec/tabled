@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
+<div class="container-fluid">
+    <div class="row align-items-start">
+        <div class="col-md-2 ml-mr-auto">
+            <h1>Heading</h1>
+        </div>
+    </div>
     <div class="jumbotron">
-        <div class="row">
+        <div class="row align-items-center">
             {% if restaurant_list %}
             <ul>
                 {% for restaurant in restaurant_list %}

@@ -4,6 +4,8 @@ from django.template import loader
 from django.db import models
 from .models import *
 
+def home(request):
+    return render(request, 'home.html')
 
 def index(request):
     context = {
